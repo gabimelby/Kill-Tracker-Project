@@ -1,4 +1,4 @@
-![ChatGPT Image Apr 29, 2025, 01_56_00 PM](https://github.com/user-attachments/assets/2085dbaf-740b-4e6f-845b-8fb5862bee64)
+<img src="![ChatGPT Image Apr 29, 2025, 01_56_00 PM](https://github.com/user-attachments/assets/2085dbaf-740b-4e6f-845b-8fb5862bee64)" alt="Alt Text" width="300" height="200">
 # Kill Tracker Final Project
 
 ## Project Overview
