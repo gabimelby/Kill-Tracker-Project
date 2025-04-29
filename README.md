@@ -1,4 +1,6 @@
-<img src="https://github.com/user-attachments/assets/2085dbaf-740b-4e6f-845b-8fb5862bee64" width="300" height="200">
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2085dbaf-740b-4e6f-845b-8fb5862bee64" width="300" height="200">
+</p>
 
 # Kill Tracker Final Project
 
