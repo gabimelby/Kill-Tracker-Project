@@ -20,7 +20,7 @@ This app is intended for basketball coaches at all levels who want an organized 
 ## Design & Architecture
 
 <p align="center">
-  <img src="https://github.com/user-attachments/files/19977665/IMG_5959.pdf" width="300" height="200">
+  <img src=https://github.com/user-attachments/assets/b94ce46b-bc65-49f9-947c-27b9b1654cb0 width="400" height="400">
 </p>
 
 I wanted this app to be very simple. When I first created the app, I was looking for ways to just track the kills. I had everything in one container tracking the amount of kills. As I continued, I realized that I wanted to split it up by quarters to make it easier and I wanted only 3 simple buttons to be able to add stops, add a kill, or reset because they scored. 
