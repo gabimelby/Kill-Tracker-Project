@@ -19,6 +19,10 @@ This app is intended for basketball coaches at all levels who want an organized 
 
 ## Design & Architecture
 
+<p align="center">
+  <img src="https://github.com/user-attachments/files/19977665/IMG_5959.pdf" width="300" height="200">
+</p>
+
 I wanted this app to be very simple. When I first created the app, I was looking for ways to just track the kills. I had everything in one container tracking the amount of kills. As I continued, I realized that I wanted to split it up by quarters to make it easier and I wanted only 3 simple buttons to be able to add stops, add a kill, or reset because they scored. 
 
 To build this app, I used a traditional MVC format. For the model, I had game_stats.py which is where the game data and logic is stored. For the view, I used kill_tracker_view.py. For the controller, I used Kill_Tracker_Controller. The controller is what coordinates the logic and updates the model.
