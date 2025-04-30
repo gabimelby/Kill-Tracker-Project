@@ -67,17 +67,21 @@ classDiagram
     KillTrackerView --> KillTrackerController: Uses
     ConsoleView --> KillTrackerController: Uses
 
-    note for KillTrackerController "Orchestrates data flow"
     note for GameStats "Stores game state"
+    note for GameStats "Track kills, stops, and manages game history" 
     note for KillTrackerView "GUI Interface"
+    note for Kill TrackerView "Collects user input and presents data"
+    note for KillTrackerController "Mediates between view and model"
+    note for KillTrackerController "Process user interaction"
 ```
 
 
 ## App Instructions 
-
+For the construction of my app, I used Thonny. This allowed me just to use the MVC framework and then run main in order to get the app up and running. For the saving components, I wanted to save this as a json file where you can see the outline of the quarters and how many kills per each quarter. There is also another option to save it to the app and then there is a list of saved games where you can view each one. 
 
 ## Challenges, Role of AI, Insights 
-
+When I first started this project, I created it all in dart and flutter. It looked great on the emulator and I loved the way it was working in Visual Studio Code. When I got to the saving aspect, I was able to save it inside the app, but I couldn't get it to save to my desktop. I also couldn't get the app to be able to read files in. My dream for this app is to be able to save it as a text file to your device and be able for the text file to be inputted while it also saves on the device as well. 
+Because of the time of the project, I decided to completely scrap dart/flutter and had ChatGPT convert it over to python. When I got to this, I used the saving format that we had learned in class from P5 for the json file.
 ## Next Steps 
 
 
