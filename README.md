@@ -26,53 +26,88 @@ To build this app, I used a traditional MVC format. For the model, I had game_st
 
 ```mermaid
 classDiagram
-    %% Model
     class GameStats {
-        +q1_kills: int
-        +q2_kills: int
-        +total_stops: int
-        +is_kill_active: bool
+        -q1_kills: int
+        -q2_kills: int
+        -q3_kills: int
+        -q4_kills: int
+        -total_stops: int
+        -is_kill_active: bool
+        -consecutive_stops: int
+        +total_kills() int @property
         +add_stop()
-        +add_kill()
+        +add_kill(quarter: str)
+        +reset_stops()
+        +reset_all()
     }
 
     class SavedGame {
-        +opponent: str
-        +date: datetime
-        +stats: GameStats
+        -opponent: str
+        -date: datetime.date
+        -stats: GameStats
+        +__init__(opponent: str, date: datetime.date, stats: GameStats)
     }
 
-    %% Controller
-    class KillTrackerController {
-        -_game_stats: GameStats
+    class GameHistoryScreen {
+        +display(game: SavedGame) @staticmethod
+    }
+
+    class KillTrackerView {
+        -root: tk.Tk
+        -controller: KillTrackerController
+        -style: ttk.Style
+        -main_frame: ttk.Frame
+        -q_labels: dict
+        -quarter_var: tk.StringVar
+        -total_stops_label: ttk.Label
+        -consecutive_stops_label: ttk.Label
+        -status_frame: ttk.LabelFrame
+        -status_label: ttk.Label
+        +__init__(root: tk.Tk, controller: KillTrackerController)
+        +create_widgets()
+        +save_to_file()
+        +load_from_file()
+        +on_quarter_change()
         +add_stop()
         +add_kill()
-        +save_to_file()
-    }
-
-    %% View
-    class KillTrackerView {
-        -controller: KillTrackerController
+        +reset_stops()
+        +reset_all()
+        +save_game()
+        +view_saved_games()
+        +show_game_details(game: SavedGame)
         +update_display()
     }
 
-    class ConsoleView {
-        -controller: KillTrackerController
-        +run()
+    class KillTrackerController {
+        -_game_stats: GameStats
+        -_current_quarter: str
+        -_saved_games: list[SavedGame]
+        +game_stats() GameStats @property
+        +current_quarter() str @property
+        +is_kill_active() bool @property
+        +consecutive_stops() int @property
+        +saved_games() list[SavedGame] @property
+        +change_quarter(quarter: str)
+        +add_stop()
+        +add_kill()
+        +reset_stops()
+        +reset_all()
+        +save_game(opponent: str, date: datetime.date)
+        +save_to_file(filename: str)
+        +load_from_file(filename: str) bool
     }
 
-    %% Relationships
-    KillTrackerController --> GameStats: Manages
-    KillTrackerController --> SavedGame: Stores
-    KillTrackerView --> KillTrackerController: Uses
-    ConsoleView --> KillTrackerController: Uses
+    class main {
+        +run_gui()
+    }
 
-    note for GameStats "Stores game state"
-    note for GameStats "Track kills, stops, and manages game history" 
-    note for KillTrackerView "GUI Interface"
-    note for Kill TrackerView "Collects user input and presents data"
-    note for KillTrackerController "Mediates between view and model"
-    note for KillTrackerController "Process user interaction"
+    KillTrackerView --> KillTrackerController : uses
+    KillTrackerController --> GameStats : manages
+    KillTrackerController --> SavedGame : creates/manages
+    GameHistoryScreen --> SavedGame : displays
+    main --> KillTrackerView : creates
+    main --> KillTrackerController : creates
+    SavedGame --> GameStats : contains
 ```
 
 
