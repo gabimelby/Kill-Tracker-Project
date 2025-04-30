@@ -21,7 +21,7 @@ This app is intended for basketball coaches at all levels who want an organized 
 
 I wanted this app to be very simple. When I first created the app, I was looking for ways to just track the kills. I had everything in one container tracking the amount of kills. As I continued, I realized that I wanted to split it up by quarters to make it easier and I wanted only 3 simple buttons to be able to add stops, add a kill, or reset because they scored. 
 
-To build this app, I used a traditional MVC format. For the model, I had game_stats.py which is where the game data and logic is stored. The classes that are in this file are SavedGame and GameStats. For the view, I used kill_tracker_view.py. The controller is what coordinates the logic and updates the model. The main class that is used in here is KillTrackerController. 
+To build this app, I used a traditional MVC format. For the model, I had game_stats.py which is where the game data and logic is stored. For the view, I used kill_tracker_view.py. For the controller, I used Kill_Tracker_Controller. The controller is what coordinates the logic and updates the model.
 
 
 ```mermaid
@@ -81,9 +81,13 @@ For the construction of my app, I used Thonny. This allowed me just to use the M
 
 ## Challenges, Role of AI, Insights 
 When I first started this project, I created it all in dart and flutter. It looked great on the emulator and I loved the way it was working in Visual Studio Code. When I got to the saving aspect, I was able to save it inside the app, but I couldn't get it to save to my desktop. I also couldn't get the app to be able to read files in. My dream for this app is to be able to save it as a text file to your device and be able for the text file to be inputted while it also saves on the device as well. 
-Because of the time of the project, I decided to completely scrap dart/flutter and had ChatGPT convert it over to python. When I got to this, I used the saving format that we had learned in class from P5 for the json file.
-## Next Steps 
 
+Because of the time of the project, I decided to completely scrap dart/flutter and had ChatGPT convert it over to python. When I got to this, I used the saving format that we had learned in class from P5 for the json file. I chose this saving because I like how it saved in a list and you could see each quarter. This was a lot easier than trying to figure out how dart/flutter was saving. 
+
+For this project, I used ChatGPT, DeepSeek, GeeksForGeeks, and also our past class assignments. When I was trying to do it all in dart and flutter, I relied heavily on DeepSeek and ChatGPT with more of the syntax of the code. I understood the break up of the MVC format and how it was working but I wasn't quite their with the actual language and what all it meant. ChatGPT and DeepSeek were very helpful in breaking down the components and explaining what each class was doing and how it was all interacting. Python is a language that I have been coding in since I first begun taking computer science classes in high school. It is a language that I feel very confident in so when I had ChatGPT convert it to Python I had a better understanding of the workings of this app!
+
+## Next Steps 
+I really want to get this app up and running by the beginning of next school year because I think it would be very beneficial for me. There are two main steps that I have to figure out by then and those are: convert back to dart/flutter and figure out how to save to your actual device. I plan on working on this project throughout the summer and in my free time because I am very passionate on where I want it to be. Once I figure out the actual saving component, then I can put my app out there and actually use it! 
 
 
 
