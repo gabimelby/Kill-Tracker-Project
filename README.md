@@ -89,6 +89,8 @@ For this project, I used ChatGPT, DeepSeek, GeeksForGeeks, and also our past cla
 ## Next Steps 
 I really want to get this app up and running by the beginning of next school year because I think it would be very beneficial for me. There are two main steps that I have to figure out by then and those are: **convert back to dart/flutter and figure out how to save to your actual device**. I plan on working on this project throughout the summer and in my free time because I am very passionate on where I want it to be. Once I figure out the actual saving component, then I can put my app out there and actually use it! 
 
+For the future, I can see myself continuing to develop this app into a more complex app that **tracks other statistics**. I would love to see it develop into tracking game stats for the individual players. We use the scorer's table book in order to do this now, but I think being able to have an app like this on the bench would provide many benefits for the coaches. I also believe that as I continue coaching, I will be exposed to many challenges that I could also add to the app that I was unaware of before hand. 
+
 
 
   
